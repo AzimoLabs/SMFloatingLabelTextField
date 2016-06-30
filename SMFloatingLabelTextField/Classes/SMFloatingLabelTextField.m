@@ -14,7 +14,8 @@ NSString *const kSMFloatingLabelTextFieldTextKeyPath = @"text";
 @property (nonatomic, strong, nonnull) UILabel *floatingLabel;
 @property (nonatomic, strong, nonnull) NSLayoutConstraint *floatingLabelTopSpaceConstraint;
 @property (nonatomic, strong, nonnull) NSLayoutConstraint *floatingLabelLeadingConstraint;
-@property (nonatomic, assign) BOOL isFloatingLabelBeingShown;
+@property (nonatomic, assign) BOOL displayFloatingPlaceholder;
+@property (nonatomic, assign) BOOL layoutLabelWhenThereIsNoText;
 @end
 
 @implementation SMFloatingLabelTextField
@@ -35,6 +36,11 @@ NSString *const kSMFloatingLabelTextFieldTextKeyPath = @"text";
         [self setup];
     }
     return self;
+}
+
+- (void)updateConstraints {
+    [super updateConstraints];
+    [self updateConstraintsToCurrentState];
 }
 
 - (void)setup {
@@ -84,6 +90,7 @@ NSString *const kSMFloatingLabelTextFieldTextKeyPath = @"text";
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
     if ([keyPath isEqualToString:kSMFloatingLabelTextFieldTextKeyPath]) {
         [self textDidChangeProgramatically];
+        self.layoutLabelWhenThereIsNoText = YES;
     }
 }
 
@@ -97,39 +104,37 @@ NSString *const kSMFloatingLabelTextFieldTextKeyPath = @"text";
 
 - (void)handleFloatingLabelStateForCurrentTextAnimated:(BOOL)animated {
     if (self.text.length == 0) {
-        [self hideFloatingLabelAnimated:animated];
-        self.isFloatingLabelBeingShown = YES;
-    } else {
-        [self showFloatingLabelAnimated:animated];
-        self.isFloatingLabelBeingShown = NO;
-    }
-}
-
-- (void)showFloatingLabelAnimated:(BOOL)animated {
-    self.floatingLabelTopSpaceConstraint.constant = 0.0;
-    
-    if (animated) {
-        [UIView animateWithDuration:0.2 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-            self.floatingLabel.alpha = 1.0;
+        if (self.layoutLabelWhenThereIsNoText) {
             [self layoutIfNeeded];
-        } completion:nil];
+            self.layoutLabelWhenThereIsNoText = NO;
+        }
+        self.displayFloatingPlaceholder = NO;
+        [self layoutFloatingLabelPositionAndAlpha:0.0 animated:animated];
     } else {
-        self.floatingLabel.alpha = 1.0;
-        [self layoutIfNeeded];
+        self.displayFloatingPlaceholder = YES;
+        [self layoutFloatingLabelPositionAndAlpha:1.0 animated:animated];
     }
 }
 
-- (void)hideFloatingLabelAnimated:(BOOL)animated {
-    self.floatingLabelTopSpaceConstraint.constant = CGRectGetMidY(self.bounds) - CGRectGetMidY(self.floatingLabel.bounds);
+- (void)layoutFloatingLabelPositionAndAlpha:(CGFloat)alpha animated:(BOOL)animated {
+    [self updateConstraintsToCurrentState];
     
     if (animated) {
         [UIView animateWithDuration:0.2 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
-            self.floatingLabel.alpha = 0.0;
+            self.floatingLabel.alpha = alpha;
             [self layoutIfNeeded];
         } completion:nil];
     } else {
-        self.floatingLabel.alpha = 0.0;
+        self.floatingLabel.alpha = alpha;
         [self layoutIfNeeded];
+    }
+}
+
+- (void)updateConstraintsToCurrentState {
+    if (self.displayFloatingPlaceholder) {
+        self.floatingLabelTopSpaceConstraint.constant = 0.0;
+    } else {
+        self.floatingLabelTopSpaceConstraint.constant = CGRectGetMidY(self.bounds) - CGRectGetMidY(self.floatingLabel.bounds);
     }
 }
 
@@ -148,14 +153,14 @@ NSString *const kSMFloatingLabelTextFieldTextKeyPath = @"text";
 
 - (void)setFloatingLabelActiveColor:(UIColor *)floatingLabelActiveColor {
     _floatingLabelActiveColor = floatingLabelActiveColor;
-    if (self.isFloatingLabelBeingShown) {
+    if (self.displayFloatingPlaceholder) {
         self.floatingLabel.textColor = floatingLabelActiveColor;
     }
 }
 
 - (void)setFloatingLabelPassiveColor:(UIColor *)floatingLabelPassiveColor {
     _floatingLabelPassiveColor = floatingLabelPassiveColor;
-    if (!self.isFloatingLabelBeingShown) {
+    if (!self.displayFloatingPlaceholder) {
         self.floatingLabel.textColor = floatingLabelPassiveColor;
     }
 }

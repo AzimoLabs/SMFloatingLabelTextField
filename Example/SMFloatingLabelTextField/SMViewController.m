@@ -7,10 +7,17 @@
 //
 
 #import "SMViewController.h"
+#import "SMFloatingLabelTextField.h"
 
 @interface SMViewController ()
-
+@property (nonatomic, weak) IBOutlet SMFloatingLabelTextField *addressTextField;
 @end
 
 @implementation SMViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self.addressTextField setText:@"NYC"];
+}
+
 @end

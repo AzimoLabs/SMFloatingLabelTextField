@@ -33,6 +33,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LGP-fL-2tA" customClass="SMFloatingLabelTextField">
+                                <rect key="frame" x="16" y="192" width="568" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="MSR-z4-5lD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -41,9 +49,15 @@
                             <constraint firstItem="8kl-vL-8WK" firstAttribute="top" secondItem="O6v-c2-u0k" secondAttribute="bottom" constant="24" id="B6d-iN-oym"/>
                             <constraint firstAttribute="trailing" secondItem="O6v-c2-u0k" secondAttribute="trailing" constant="16" id="BUM-xK-cHO"/>
                             <constraint firstItem="O6v-c2-u0k" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" constant="16" id="Kc7-ce-b3t"/>
+                            <constraint firstItem="LGP-fL-2tA" firstAttribute="top" secondItem="8kl-vL-8WK" secondAttribute="bottom" constant="24" id="Yp7-Ou-wbD"/>
                             <constraint firstAttribute="trailing" secondItem="8kl-vL-8WK" secondAttribute="trailing" constant="16" id="aP1-xV-lKe"/>
+                            <constraint firstAttribute="trailing" secondItem="LGP-fL-2tA" secondAttribute="trailing" constant="16" id="kFm-gG-TV6"/>
+                            <constraint firstItem="LGP-fL-2tA" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" constant="16" id="zrN-vr-M9L"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addressTextField" destination="LGP-fL-2tA" id="cuZ-4x-gec"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
