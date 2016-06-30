@@ -5,6 +5,8 @@ This CocoaPod providers the ability to use a UITextField that displays floating 
 [![Version](https://img.shields.io/cocoapods/v/SMFloatingLabelTextField.svg?style=flat)](http://cocoapods.org/pods/SMFloatingLabelTextField)
 [![Platform](https://img.shields.io/cocoapods/p/SMFloatingLabelTextField.svg?style=flat)](http://cocoapods.org/pods/SMFloatingLabelTextField)
 
+![Example](https://raw.githubusercontent.com/AzimoLabs/SMFloatingLabelTextField/master/art/floating_label.gif)
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
