@@ -21,12 +21,12 @@ Pod::Spec.new do |s|
 This CocoaPod providers the ability to use a UITextField that displays floating placeholder. When user type some text into field, or text is set programatically, placeholder label is displayed above field itself. The placeholder labes appears and disappears using animation.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/SMFloatingLabelTextField'
+  s.homepage         = 'https://github.com/AzimoLabs/SMFloatingLabelTextField'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Michał Moskała' => 'micmos@azimo.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/SMFloatingLabelTextField.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'https://github.com/AzimoLabs/SMFloatingLabelTextField.git', :tag => s.version.to_s }
+   s.social_media_url = 'https://twitter.com/azimolabs'
 
   s.ios.deployment_target = '8.0'
 
