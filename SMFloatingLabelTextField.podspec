@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SMFloatingLabelTextField'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of SMFloatingLabelTextField.'
+  s.summary          = 'A subclass of UITextField that displays floating placeholder'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+This CocoaPod providers the ability to use a UITextField that displays floating placeholder. When user type some text into field, or text is set programatically, placeholder label is displayed above field itself. The placeholder labes appears and disappears using animation.
                        DESC
 
   s.homepage         = 'https://github.com/<GITHUB_USERNAME>/SMFloatingLabelTextField'

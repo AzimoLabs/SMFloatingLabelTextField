@@ -8,37 +8,26 @@
 
 // https://github.com/kiwi-bdd/Kiwi
 
+#import <Kiwi/Kiwi.h>
+@import SMFloatingLabelTextField;
+
 SPEC_BEGIN(InitialTests)
 
-describe(@"My initial tests", ^{
+describe(@"Tests", ^{
 
-  context(@"will fail", ^{
-
-      it(@"can do maths", ^{
-          [[@1 should] equal:@2];
-      });
-
-      it(@"can read", ^{
-          [[@"number" should] equal:@"string"];
-      });
+    __block SMFloatingLabelTextField* sut = nil;
     
-      it(@"will wait and fail", ^{
-          NSObject *object = [[NSObject alloc] init];
-          [[expectFutureValue(object) shouldEventually] receive:@selector(autoContentAccessingProxy)];
-      });
-  });
-
-  context(@"will pass", ^{
+    beforeEach(^{
+        sut = [[SMFloatingLabelTextField alloc] initWithFrame:CGRectMake(0, 0, 100.0f, 50.0f)];
+    });
     
-      it(@"can do maths", ^{
-        [[@1 should] beLessThan:@23];
-      });
-    
-      it(@"can read", ^{
-          [[@"team" shouldNot] containString:@"I"];
-      });  
-  });
-  
+    context(@"field is initialized", ^{
+        it(@"should have default configuration", ^{
+            [[sut.floatingLabelPassiveColor should] equal:[UIColor lightGrayColor]];
+            [[sut.floatingLabelActiveColor should] equal:[UIColor blueColor]];
+            [[sut.floatingLabelFont should] equal:[UIFont systemFontOfSize:12.0]];
+        });
+    });
 });
 
 SPEC_END
