@@ -172,6 +172,11 @@ NSString *const kSMFloatingLabelTextFieldTextKeyPath = @"text";
     self.floatingLabel.text = placeholder;
 }
 
+- (void)setAttributedPlaceholder:(NSAttributedString *)attributedPlaceholder {
+    [super setAttributedPlaceholder:attributedPlaceholder];
+    self.floatingLabel.attributedText = attributedPlaceholder;
+}
+
 #pragma mark - dealloc
 
 - (void)dealloc {
