@@ -11,12 +11,20 @@
 
 @interface SMViewController ()
 @property (nonatomic, weak) IBOutlet SMFloatingLabelTextField *addressTextField;
+@property (nonatomic, weak) IBOutlet SMFloatingLabelTextField *lastNameTextField;
 @end
 
 @implementation SMViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSDictionary *lastNamePlaceholderAttributes = @{NSForegroundColorAttributeName: [UIColor magentaColor],
+                                                    NSFontAttributeName: [UIFont systemFontOfSize:14.0f weight:UIFontWeightBold]
+                                                    };
+    NSAttributedString *lastNamePlaceholder = [[NSAttributedString alloc] initWithString:@"Last name" attributes:lastNamePlaceholderAttributes];
+    
+    [self.lastNameTextField setAttributedPlaceholder:lastNamePlaceholder];
     [self.addressTextField setText:@"NYC"];
 }
 
