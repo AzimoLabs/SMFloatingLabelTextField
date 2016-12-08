@@ -174,7 +174,23 @@ NSString *const kSMFloatingLabelTextFieldTextKeyPath = @"text";
 
 - (void)setAttributedPlaceholder:(NSAttributedString *)attributedPlaceholder {
     [super setAttributedPlaceholder:attributedPlaceholder];
-    self.floatingLabel.attributedText = attributedPlaceholder;
+    self.floatingLabel.attributedText = [self floatingLabelAttributedPlacecholderStringFrom:attributedPlaceholder];
+}
+
+- (NSAttributedString *)floatingLabelAttributedPlacecholderStringFrom:(NSAttributedString *)attributedString {
+    NSMutableAttributedString *mutableAttributedString = [attributedString mutableCopy];
+    NSRange wholeStringRange = NSMakeRange(0, mutableAttributedString.length);
+    [mutableAttributedString removeAttribute:NSFontAttributeName range:wholeStringRange];
+    [mutableAttributedString removeAttribute:NSForegroundColorAttributeName range:wholeStringRange];
+    
+    [mutableAttributedString addAttribute:NSFontAttributeName value:self.floatingLabelFont range:wholeStringRange];
+    if (self.displayFloatingPlaceholder) {
+        [mutableAttributedString addAttribute:NSForegroundColorAttributeName value:self.floatingLabelActiveColor range:wholeStringRange];
+    } else {
+        [mutableAttributedString addAttribute:NSForegroundColorAttributeName value:self.floatingLabelPassiveColor range:wholeStringRange];
+    }
+    
+    return [mutableAttributedString copy];
 }
 
 #pragma mark - dealloc

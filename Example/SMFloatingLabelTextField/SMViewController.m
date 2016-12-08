@@ -20,7 +20,8 @@
     [super viewDidLoad];
     
     NSDictionary *lastNamePlaceholderAttributes = @{NSForegroundColorAttributeName: [UIColor magentaColor],
-                                                    NSFontAttributeName: [UIFont systemFontOfSize:14.0f weight:UIFontWeightBold]
+                                                    NSFontAttributeName: [UIFont systemFontOfSize:14.0f weight:UIFontWeightBold],
+                                                    NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle),
                                                     };
     NSAttributedString *lastNamePlaceholder = [[NSAttributedString alloc] initWithString:@"Last name" attributes:lastNamePlaceholderAttributes];
     
