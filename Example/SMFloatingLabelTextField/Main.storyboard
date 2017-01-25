@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,39 +21,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O6v-c2-u0k" customClass="SMFloatingLabelTextField">
-                                <rect key="frame" x="16" y="44" width="343" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="1fl-ep-0yC"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O6v-c2-u0k" customClass="SMFloatingLabelTextField">
+                                <rect key="frame" x="16" y="50" width="343" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8kl-vL-8WK" customClass="SMFloatingLabelTextField">
-                                <rect key="frame" x="16" y="118" width="343" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="cB4-bP-zAj"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8kl-vL-8WK" customClass="SMFloatingLabelTextField">
+                                <rect key="frame" x="16" y="101" width="343" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LGP-fL-2tA" customClass="SMFloatingLabelTextField">
-                                <rect key="frame" x="16" y="192" width="343" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="MSR-z4-5lD"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LGP-fL-2tA" customClass="SMFloatingLabelTextField">
+                                <rect key="frame" x="16" y="152" width="343" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="O6v-c2-u0k" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="24" id="28A-6h-Tmw"/>
+                            <constraint firstItem="O6v-c2-u0k" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="30" id="28A-6h-Tmw"/>
                             <constraint firstItem="8kl-vL-8WK" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" constant="16" id="8nD-YM-0aa"/>
-                            <constraint firstItem="8kl-vL-8WK" firstAttribute="top" secondItem="O6v-c2-u0k" secondAttribute="bottom" constant="24" id="B6d-iN-oym"/>
+                            <constraint firstItem="8kl-vL-8WK" firstAttribute="top" secondItem="O6v-c2-u0k" secondAttribute="bottom" constant="30" id="B6d-iN-oym"/>
                             <constraint firstAttribute="trailing" secondItem="O6v-c2-u0k" secondAttribute="trailing" constant="16" id="BUM-xK-cHO"/>
                             <constraint firstItem="O6v-c2-u0k" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" constant="16" id="Kc7-ce-b3t"/>
-                            <constraint firstItem="LGP-fL-2tA" firstAttribute="top" secondItem="8kl-vL-8WK" secondAttribute="bottom" constant="24" id="Yp7-Ou-wbD"/>
+                            <constraint firstItem="LGP-fL-2tA" firstAttribute="top" secondItem="8kl-vL-8WK" secondAttribute="bottom" constant="30" id="Yp7-Ou-wbD"/>
                             <constraint firstAttribute="trailing" secondItem="8kl-vL-8WK" secondAttribute="trailing" constant="16" id="aP1-xV-lKe"/>
                             <constraint firstAttribute="trailing" secondItem="LGP-fL-2tA" secondAttribute="trailing" constant="16" id="kFm-gG-TV6"/>
                             <constraint firstItem="LGP-fL-2tA" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" constant="16" id="zrN-vr-M9L"/>
