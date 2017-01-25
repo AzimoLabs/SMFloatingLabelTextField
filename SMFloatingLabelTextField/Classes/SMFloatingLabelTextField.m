@@ -52,8 +52,9 @@ NSString *const kSMFloatingLabelTextFieldTextKeyPath = @"text";
 - (void)setupInitialInspectableAttributesValues {
     self.floatingLabelPassiveColor = [UIColor lightGrayColor];
     self.floatingLabelActiveColor = [UIColor blueColor];
-    self.floatingLabelFont = [UIFont systemFontOfSize:12.0];
+    self.floatingLabelFont = [UIFont preferredFontForTextStyle:UIFontTextStyleFootnote];
     self.floatingLabelLeadingOffset = [self textRectForBounds:self.bounds].origin.x;
+    self.floatingLabelTopSpace = [self.floatingLabelFont pointSize];
 }
 
 - (void)setupFloatingLabel {
@@ -65,8 +66,22 @@ NSString *const kSMFloatingLabelTextFieldTextKeyPath = @"text";
     self.floatingLabel.textColor = self.floatingLabelPassiveColor;
     [self insertSubview:self.floatingLabel atIndex:0];
     
-    self.floatingLabelLeadingConstraint = [NSLayoutConstraint constraintWithItem:self.floatingLabel attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeading multiplier:1.0 constant:self.floatingLabelLeadingOffset];
-    self.floatingLabelTopSpaceConstraint = [NSLayoutConstraint constraintWithItem:self.floatingLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0 constant:0.0];
+    self.floatingLabelLeadingConstraint = [NSLayoutConstraint constraintWithItem:self.floatingLabel
+                                                                       attribute:NSLayoutAttributeLeading
+                                                                       relatedBy:NSLayoutRelationEqual
+                                                                          toItem:self
+                                                                       attribute:NSLayoutAttributeLeading
+                                                                      multiplier:1.0
+                                                                        constant:self.floatingLabelLeadingOffset];
+    
+    self.floatingLabelTopSpaceConstraint = [NSLayoutConstraint constraintWithItem:self.floatingLabel
+                                                                        attribute:NSLayoutAttributeBottom
+                                                                        relatedBy:NSLayoutRelationEqual
+                                                                           toItem:self
+                                                                        attribute:NSLayoutAttributeTop
+                                                                       multiplier:1.0
+                                                                         constant:0.0];
+    
     [self addConstraints:@[self.floatingLabelLeadingConstraint, self.floatingLabelTopSpaceConstraint]];
 }
 
@@ -134,7 +149,7 @@ NSString *const kSMFloatingLabelTextFieldTextKeyPath = @"text";
     if (self.displayFloatingPlaceholder) {
         self.floatingLabelTopSpaceConstraint.constant = 0.0;
     } else {
-        self.floatingLabelTopSpaceConstraint.constant = CGRectGetMidY(self.bounds) - CGRectGetMidY(self.floatingLabel.bounds);
+        self.floatingLabelTopSpaceConstraint.constant = self.floatingLabelTopSpace;
     }
 }
 
@@ -148,6 +163,12 @@ NSString *const kSMFloatingLabelTextFieldTextKeyPath = @"text";
 - (void)setFloatingLabelLeadingOffset:(CGFloat)floatingLabelLeadingOffset {
     _floatingLabelLeadingOffset = floatingLabelLeadingOffset;
     self.floatingLabelLeadingConstraint.constant = floatingLabelLeadingOffset;
+    [self setNeedsLayout];
+}
+
+- (void)setfloatingLabelTopSpace:(CGFloat)floatingLabelTopSpace {
+    _floatingLabelTopSpace = floatingLabelTopSpace;
+    self.floatingLabelTopSpaceConstraint.constant = floatingLabelTopSpace;
     [self setNeedsLayout];
 }
 

@@ -12,5 +12,6 @@
 @property (nonatomic, strong, nonnull) IBInspectable UIColor *floatingLabelActiveColor;
 @property (nonatomic, strong, nonnull) IBInspectable UIColor *floatingLabelPassiveColor;
 @property (nonatomic, assign) IBInspectable CGFloat floatingLabelLeadingOffset;
+@property (nonatomic, assign) IBInspectable CGFloat floatingLabelTopSpace;
 @property (nonatomic, strong, nonnull) UIFont *floatingLabelFont;
 @end
