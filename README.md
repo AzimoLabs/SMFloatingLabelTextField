@@ -18,11 +18,17 @@ CocoaPods 1.0
 
 ## Installation
 
-SMFloatingLabelTextField is available through [CocoaPods](http://cocoapods.org). To install
+SMFloatingLabelTextField is available through [CocoaPods](http://cocoapods.org) and [Carthage](https://github.com/Carthage/Carthage). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod "SMFloatingLabelTextField"
+```
+
+or Cartfile:
+
+```ruby
+github "AzimoLabs/SMFloatingLabelTextField"
 ```
 
 ## Author
