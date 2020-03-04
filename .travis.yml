@@ -13,5 +13,5 @@ xcode_destination: platform=iOS Simulator,OS=13.0,name=iPhone 11 Pro
 # - gem install cocoapods # Since Travis is not always on latest version
 # - pod install --project-directory=Example
 script:
-- set -o pipefail && xcodebuild build -workspace Example/SMFloatingLabelTextField.xcworkspace -scheme SMFloatingLabelTextField-Example -destination platform\=iOS\ Simulator,OS\=13.0,name\=iPhone\ 11\ Pro | xcpretty
+- set -o pipefail && xcodebuild test -workspace Example/SMFloatingLabelTextField.xcworkspace -scheme SMFloatingLabelTextField-Example -destination platform\=iOS\ Simulator,OS\=13.0,name\=iPhone\ 11\ Pro | xcpretty
 - pod lib lint
