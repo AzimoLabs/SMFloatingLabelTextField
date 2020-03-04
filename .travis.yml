@@ -2,13 +2,16 @@
 # * http://www.objc.io/issue-6/travis-ci.html
 # * https://github.com/supermarin/xcpretty#usage
 
-osx_image: xcode7.3
+os: osx
+osx_image: xcode11
 language: objective-c
+xcode_workspace: Example/SMFloatingLabelTextField.xcworkspace
+xcode_destination: platform=iOS Simulator,OS=13.0,name=iPhone 11 Pro
 # cache: cocoapods
 # podfile: Example/Podfile
 # before_install:
 # - gem install cocoapods # Since Travis is not always on latest version
 # - pod install --project-directory=Example
 script:
-- set -o pipefail && xcodebuild test -workspace Example/SMFloatingLabelTextField.xcworkspace -scheme SMFloatingLabelTextField-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
+- set -o pipefail && xcodebuild build -workspace Example/SMFloatingLabelTextField.xcworkspace -scheme SMFloatingLabelTextField-Example -destination platform\=iOS\ Simulator,OS\=13.0,name\=iPhone\ 11\ Pro | xcpretty
 - pod lib lint
