@@ -20,9 +20,12 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "SMFloatingLabelTextField",
-            dependencies: []),
+            dependencies: [],
+            path: "SMFloatingLabelTextField",
+            exclude: ["Sources/SMFloatingLabelTextField/SMFloatingLabelTextField.swift"]),
         .testTarget(
             name: "SMFloatingLabelTextFieldTests",
-            dependencies: ["SMFloatingLabelTextField"]),
+            dependencies: ["SMFloatingLabelTextField"],
+            path: "SMFloatingLabelTextField"),
     ]
 )
