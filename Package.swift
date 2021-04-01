@@ -21,8 +21,7 @@ let package = Package(
         .target(
             name: "SMFloatingLabelTextField",
             dependencies: [],
-            path: "SMFloatingLabelTextField",
-            exclude: ["Sources/SMFloatingLabelTextField/SMFloatingLabelTextField.swift"]),
+            path: "SMFloatingLabelTextField"),
         .testTarget(
             name: "SMFloatingLabelTextFieldTests",
             dependencies: ["SMFloatingLabelTextField"],
