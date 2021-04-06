@@ -21,7 +21,7 @@ let package = Package(
         .target(
             name: "SMFloatingLabelTextField",
             dependencies: [],
-            path: "SMFloatingLabelTextField"),
+            path: "SMFloatingLabelTextField/Classes"),
         .testTarget(
             name: "SMFloatingLabelTextFieldTests",
             dependencies: ["SMFloatingLabelTextField"],
