@@ -22,9 +22,9 @@ let package = Package(
             name: "SMFloatingLabelTextField",
             dependencies: [],
             path: "SMFloatingLabelTextField/Classes"),
-        .testTarget(
-            name: "SMFloatingLabelTextFieldTests",
-            dependencies: ["SMFloatingLabelTextField"],
-            path: "SMFloatingLabelTextField"),
+//        .testTarget(
+//            name: "SMFloatingLabelTextFieldTests",
+//            dependencies: ["SMFloatingLabelTextField"],
+//            path: "SMFloatingLabelTextField"),
     ]
 )
