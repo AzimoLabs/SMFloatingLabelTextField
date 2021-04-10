@@ -25,7 +25,7 @@ describe(@"Tests", ^{
         it(@"should have default configuration", ^{
             [[sut.floatingLabelPassiveColor should] equal:[UIColor lightGrayColor]];
             [[sut.floatingLabelActiveColor should] equal:[UIColor blueColor]];
-            [[sut.floatingLabelFont should] equal:[UIFont systemFontOfSize:12.0]];
+            [[sut.floatingLabelFont should] equal:[UIFont preferredFontForTextStyle:UIFontTextStyleFootnote]];
         });
     });
 });
