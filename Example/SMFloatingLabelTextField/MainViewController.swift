@@ -12,9 +12,9 @@ import SMFloatingLabelTextField
 
 class MainViewController: UIViewController {
     
-    @IBOutlet weak var lastName: SMFloatingLabelTextField!
-    @IBOutlet weak var firstName: SMFloatingLabelTextField!
-    @IBOutlet weak var address: SMFloatingLabelTextField!
+    @IBOutlet weak var lastName: FloatingLabelTextField!
+    @IBOutlet weak var firstName: FloatingLabelTextField!
+    @IBOutlet weak var address: FloatingLabelTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
