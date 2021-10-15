@@ -10,6 +10,9 @@ let package = Package(
         .library(
             name: "SMFloatingLabelTextField",
             targets: ["SMFloatingLabelTextField"]),
+        .library(
+            name: "FloatingLabelTextField",
+            targets: ["FloatingLabelTextField"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -22,6 +25,10 @@ let package = Package(
             name: "SMFloatingLabelTextField",
             dependencies: [],
             path: "SMFloatingLabelTextField/Classes"),
+        .target(
+            name: "FloatingLabelTextField",
+            dependencies: [],
+            path: "FloatingLabelTextField/Classes"),
 //        .testTarget(
 //            name: "SMFloatingLabelTextFieldTests",
 //            dependencies: ["SMFloatingLabelTextField"],
