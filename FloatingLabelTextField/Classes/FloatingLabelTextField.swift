@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-public class FloatingLabelTextField: UITextField {
+open class FloatingLabelTextField: UITextField {
     
     @IBInspectable public var floatingLabelActiveColor = UIColor.lightGray {
         didSet {
@@ -47,7 +47,7 @@ public class FloatingLabelTextField: UITextField {
     private var displayFloatingPlaceholder: Bool = false
     private var layoutLabelWhenThereIsNoText: Bool = false
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         super.init(coder: coder)
         self.setup()
     }
@@ -172,13 +172,13 @@ public class FloatingLabelTextField: UITextField {
     
     // MARK: overriden method
     
-    public override var placeholder: String? {
+    open override var placeholder: String? {
         didSet {
             self.floatingLabel.text = placeholder
         }
     }
     
-    public override var attributedPlaceholder: NSAttributedString? {
+    open override var attributedPlaceholder: NSAttributedString? {
         didSet {
             self.floatingLabel.attributedText = self.floatingLabelAttributedPlacecholderStringFrom(attributedPlaceholder)
         }
