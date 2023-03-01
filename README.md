@@ -18,11 +18,17 @@ CocoaPods 1.0
 
 ## Installation
 
-SMFloatingLabelTextField is available through [CocoaPods](http://cocoapods.org). To install
+SMFloatingLabelTextField is available through [CocoaPods](http://cocoapods.org) and [Carthage](https://github.com/Carthage/Carthage). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod "SMFloatingLabelTextField"
+```
+
+or Cartfile:
+
+```ruby
+github "AzimoLabs/SMFloatingLabelTextField"
 ```
 
 ## Author
@@ -32,3 +38,7 @@ Michał Moskała, micmos@azimo.com
 ## License
 
 SMFloatingLabelTextField is available under the Apache license. See the LICENSE file for more info.
+
+
+# Towards financial services available to all
+We’re working throughout the company to create faster, cheaper, and more available financial services all over the world, and here are some of the techniques that we’re utilizing. There’s still a long way ahead of us, and if you’d like to be part of that journey, check out our [careers page](https://bit.ly/3vajnu6).

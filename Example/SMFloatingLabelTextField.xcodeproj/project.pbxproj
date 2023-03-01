@@ -12,9 +12,6 @@
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
-		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
-		6003F59E195388D20070C39A /* SMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* SMAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* SMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* SMViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -22,6 +19,8 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		990CF66227073579009C43FB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990CF66127073579009C43FB /* MainViewController.swift */; };
+		9929DAFF27073C59009962FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9929DAFE27073C59009962FB /* AppDelegate.swift */; };
 		ADC093613651458EC10BC00D /* Pods_SMFloatingLabelTextField_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA1F608A2E77D0FC695AEEF6 /* Pods_SMFloatingLabelTextField_Example.framework */; };
 		BCAFDF72FD9CFBCB1D7655D3 /* Pods_SMFloatingLabelTextField_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 107E45E3895F94CEE033E509 /* Pods_SMFloatingLabelTextField_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -47,12 +46,7 @@
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6003F595195388D20070C39A /* SMFloatingLabelTextField-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SMFloatingLabelTextField-Info.plist"; sourceTree = "<group>"; };
 		6003F597195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6003F599195388D20070C39A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6003F59B195388D20070C39A /* SMFloatingLabelTextField-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SMFloatingLabelTextField-Prefix.pch"; sourceTree = "<group>"; };
-		6003F59C195388D20070C39A /* SMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMAppDelegate.h; sourceTree = "<group>"; };
-		6003F59D195388D20070C39A /* SMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* SMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* SMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* SMFloatingLabelTextField_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMFloatingLabelTextField_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -62,6 +56,9 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8CE414E39CA05F4F5383A6BD /* Pods-SMFloatingLabelTextField_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMFloatingLabelTextField_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMFloatingLabelTextField_Example/Pods-SMFloatingLabelTextField_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		990CF66027073579009C43FB /* SMFloatingLabelTextField_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SMFloatingLabelTextField_Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		990CF66127073579009C43FB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9929DAFE27073C59009962FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAC098C20EE0D2976F6664B8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		CA1F608A2E77D0FC695AEEF6 /* Pods_SMFloatingLabelTextField_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMFloatingLabelTextField_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D834FF86A8DA005BF0A9DE5C /* Pods-SMFloatingLabelTextField_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMFloatingLabelTextField_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMFloatingLabelTextField_Tests/Pods-SMFloatingLabelTextField_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,14 +129,13 @@
 		6003F593195388D20070C39A /* Example for SMFloatingLabelTextField */ = {
 			isa = PBXGroup;
 			children = (
-				6003F59C195388D20070C39A /* SMAppDelegate.h */,
-				6003F59D195388D20070C39A /* SMAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				6003F5A5195388D20070C39A /* SMViewController.h */,
-				6003F5A6195388D20070C39A /* SMViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 				3507DBA61D252DD400D6A20E /* Launch Screen.storyboard */,
+				990CF66127073579009C43FB /* MainViewController.swift */,
+				990CF66027073579009C43FB /* SMFloatingLabelTextField_Example-Bridging-Header.h */,
+				9929DAFE27073C59009962FB /* AppDelegate.swift */,
 			);
 			name = "Example for SMFloatingLabelTextField";
 			path = SMFloatingLabelTextField;
@@ -150,7 +146,6 @@
 			children = (
 				6003F595195388D20070C39A /* SMFloatingLabelTextField-Info.plist */,
 				6003F596195388D20070C39A /* InfoPlist.strings */,
-				6003F599195388D20070C39A /* main.m */,
 				6003F59B195388D20070C39A /* SMFloatingLabelTextField-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -250,6 +245,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Michał Moskała";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						LastSwiftMigration = 1300;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -260,6 +258,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -394,9 +393,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F59E195388D20070C39A /* SMAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* SMViewController.m in Sources */,
-				6003F59A195388D20070C39A /* main.m in Sources */,
+				9929DAFF27073C59009962FB /* AppDelegate.swift in Sources */,
+				990CF66227073579009C43FB /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,7 +469,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -504,7 +502,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -517,12 +515,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SMFloatingLabelTextField/SMFloatingLabelTextField-Prefix.pch";
 				INFOPLIST_FILE = "SMFloatingLabelTextField/SMFloatingLabelTextField-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SMFloatingLabelTextField/SMFloatingLabelTextField_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -533,12 +536,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SMFloatingLabelTextField/SMFloatingLabelTextField-Prefix.pch";
 				INFOPLIST_FILE = "SMFloatingLabelTextField/SMFloatingLabelTextField-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SMFloatingLabelTextField/SMFloatingLabelTextField_Example-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -547,6 +554,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D834FF86A8DA005BF0A9DE5C /* Pods-SMFloatingLabelTextField_Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -571,6 +579,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F64D99A78957E7B5098C4826 /* Pods-SMFloatingLabelTextField_Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
